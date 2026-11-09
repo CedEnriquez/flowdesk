@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+
+/*
+ * Warm "paper & ink" theme: cream background, dark-brown ink, lemon accent,
+ * hard offset shadows. The default slate/indigo/status palettes are remapped
+ * so every existing utility class picks the theme up.
+ */
+@theme {
+  --font-sans: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --color-cream-100: #f7f2e7;
+  --color-cream-200: #efe8d8;
+  --color-ink-100: #e7e0d6;
+  --color-ink-200: #cfc6bc;
+  --color-ink-300: #a79a91;
+  --color-ink-500: #75655b;
+  --color-ink-700: #4a3b32;
+  --color-ink-900: #2b211b;
+  --color-lemon-100: #fbefc4;
+  --color-lemon-500: #f2c94c;
+  --color-lemon-600: #e0b52f;
+  --color-olive-100: #e4e8d8;
+  --color-olive-600: #5c6b3f;
+  --color-terra-100: #f4ded3;
+  --color-terra-600: #b5542d;
+  --color-terra-700: #94421f;
+
+  /* remap defaults */
+  --color-white: #fffdf8;
+  --color-slate-50: #f7f2e7;
+  --color-slate-100: #efe8d8;
+  --color-slate-200: #e7e0d6;
+  --color-slate-300: #cfc6bc;
+  --color-slate-400: #a79a91;
+  --color-slate-500: #75655b;
+  --color-slate-600: #5f5047;
+  --color-slate-700: #4a3b32;
+  --color-slate-800: #3a2d26;
+  --color-slate-900: #2b211b;
+  --color-indigo-50: #fbefc4;
+  --color-indigo-500: #f2c94c;
+  --color-indigo-600: #f2c94c;
+  --color-indigo-700: #b5542d;
+  --color-sky-50: #efe8d8;
+  --color-sky-600: #75655b;
+  --color-sky-700: #4a3b32;
+  --color-sky-800: #4a3b32;
+  --color-amber-50: #fbefc4;
+  --color-amber-200: #e0b52f;
+  --color-amber-600: #e0b52f;
+  --color-amber-800: #6b4f00;
+  --color-emerald-50: #e4e8d8;
+  --color-emerald-600: #5c6b3f;
+  --color-emerald-700: #4a5a2f;
+  --color-emerald-800: #3d4a27;
+  --color-rose-50: #f4ded3;
+  --color-rose-200: #db9b7e;
+  --color-rose-400: #b5542d;
+  --color-rose-600: #b5542d;
+  --color-rose-700: #94421f;
+  --color-rose-800: #7a3519;
+  --color-orange-50: #fbefc4;
+  --color-orange-600: #e0b52f;
+  --color-orange-700: #6b4f00;
+  --color-red-50: #f4ded3;
+  --color-red-600: #b5542d;
+  --color-red-700: #94421f;
+
+  --radius-pill: 999px;
+  --shadow-hard: 4px 4px 0 #2b211b;
+  --shadow-hard-sm: 2px 2px 0 #2b211b;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream-100 text-ink-900 font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -0.015em;
+  }
+}
